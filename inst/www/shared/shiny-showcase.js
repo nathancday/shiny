@@ -112,7 +112,10 @@
     // End any previous highlight before starting this one
     jQuery(el)
       .stop(true, true)
-      .effect("highlight", null, 1600);
+      .effect("highlight", null, 5000);
+      
+    // Scroll to highlighted element
+    el.scrollIntoView({behavior: 'smooth'});
   }
 
   // If this is the main Shiny window, wire up our custom message handler.
